@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Profile Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: oranbg-orange-500
+                /* Dark navy blue from the images */
+        }
+
+        .card-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .profile-image {
+            background-image: url('https://i.pinimg.com/736x/01/ab/61/01ab61c739e4311b092e91f8c6879c4f.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .work-image {
+            transition: transform 0.3s ease;
+        }
+
+        .work-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white pb-8  ">
+    <div class="max-w-md mx-auto">
+        <!-- Main Profile Card -->
+        <div class="relative bg-white  card-shadow overflow-hidden mb-6 h-[570px]">
+            <!-- Background Image Cover -->
+            <img src="images/anil.png" alt="Background" class="absolute w-full h-full  bottom-0 object-contain z-0">
+
+            <!-- 🔥 Bottom Black Gradient Overlay -->
+            <div class="absolute inset-x-0 bottom-0 h-32 z-10"
+                style="background: linear-gradient(to top, white, 1%, transparent 100%);">
+            </div>
+
+            <!-- Overlay content -->
+            <div class="relative z-20 text-white p-8 h-full flex flex-col justify-start">
+
+                <div class="flex items-center space-x-6 mt-60 text-black">
+                    <div>
+                        <h1 class="text-3xl font-bold mb-1" id="userName">K ANIL KUMAR</h1>
+                        <p class="text-lg opacity-90 mb-1 font-semibold" id="userTitle">You</p>
+                        <p class="text-base opacity-80 font-semibold" id="userCompany">Your Company</p>
+
+                        <div class="mt-3 flex items-center">
+                            <div
+                                class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold text-lg">
+                                S
+                            </div>
+                            <span class="ml-2 text-lg font-semibold text-black ">Teamwork.Co</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-1 left-8 flex space-x-6 z-30">
+                    <button onclick="makeCall()"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                        <i class="fas fa-phone"></i>
+                    </button>
+                    <button onclick="sendEmail()"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                    <button onclick="sendMessage()"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                        <i class="fas fa-comment"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="px-4">
+            <div class="bg-gray-300 rounded-3xl card-shadow p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-3">About Me</h2>
+                <p class="text-gray-600 leading-relaxed" id="aboutDescription">
+                    Elected representative committed to public service, grassroots development, and transparent
+                    governance.
+                    Focused on uplifting communities, empowering youth, and driving sustainable progress for all.
+                </p>
+            </div>
+        </div>
+
+        <!-- Our Work Section -->
+        <div class="px-4">
+            <div class="bg-gray-300 rounded-3xl card-shadow p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">Our Work</h2>
+                <p class="text-gray-600 mb-6">Here are some of our major projects and initiatives</p>
+
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <!-- Work Item 1 -->
+                    <div
+                        class="relative rounded-xl p-4 shadow-sm h-52 flex flex-col justify-center items-center bg-amber-200 hover:bg-amber-300 transition-colors">
+                        <h3 class="font-semibold text-sm text-gray-800 mb-2">Grievance Portal</h3>
+                        <a href="https://kanilkumar.in/" target="_blank"
+                            class="inline-flex absolute bottom-4 left-auto items-center justify-center text-orange-500 text-sm font-medium hover:text-orange-600">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Project
+                        </a>
+                    </div>
+
+                    <!-- Work Item 2 -->
+                    <div
+                        class="relative rounded-xl p-4 shadow-sm h-52 flex flex-col justify-center items-center bg-sky-200 hover:bg-sky-300 transition-colors">
+                        <h3 class="font-semibold text-sm text-gray-800 mb-2">Various BJP Schemes Portal</h3>
+                        <a href="https://kanilkumar.in/schemes/" target="_blank"
+                            class="inline-flex absolute bottom-4 left-auto items-center justify-center text-orange-500 text-sm font-medium hover:text-orange-600">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Project
+                        </a>
+                    </div>
+
+                    <!-- Work Item 3 -->
+                    <div
+                        class="relative rounded-xl p-4 shadow-sm h-52 flex flex-col justify-center items-center bg-violet-300 hover:bg-violet-400 transition-colors">
+                        <h3 class="font-semibold text-sm text-gray-800 mb-2">MLA Digital Seva</h3>
+                        <a href="https://mladigitalseva.com/" target="_blank"
+                            class="inline-flex absolute bottom-4 left-auto items-center justify-center text-orange-500 text-sm font-medium hover:text-orange-600">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Project
+                        </a>
+                    </div>
+
+                    <!-- Work Item 4 -->
+                    <div
+                        class="relative rounded-xl p-4 shadow-sm h-52 flex flex-col justify-center items-center bg-emerald-200 hover:bg-emerald-300 transition-colors">
+                        <h3 class="font-semibold text-sm text-gray-800 mb-2">Startup BERHAMPUR</h3>
+                        <a href="https://kanilkumar.in/startup/" target="_blank"
+                            class="inline-flex absolute bottom-4 left-auto items-center justify-center text-orange-500 text-sm font-medium hover:text-orange-600">
+                            <i class="fas fa-external-link-alt mr-1"></i> View Project
+                        </a>
+                    </div>
+
+                    <!-- Work Item 5 -->
+                    <div
+                        class="bg-gradient-to-r from-rose-100 to-teal-100 rounded-xl p-4 shadow-sm h-52 flex flex-col justify-center items-center col-span-2 hover:from-rose-200 hover:to-teal-200 transition-colors">
+                        <h3 class="font-semibold text-sm text-gray-800 mb-2">Program Updates on Sarala & Namo App</h3>
+                        <p class="text-gray-600 text-sm max-w-md">Regularly updating programs and activities in Sarala &
+                            Namo mobile applications.</p>
+                    </div>
+                </div>
+
+
+                <!-- View All Work Button -->
+                <div class="mt-6 text-center">
+                    <button onclick="viewAllWork()"
+                        class="bg-orange-500 text-white py-2 px-6 rounded-xl font-semibold hover:bg-orange-600 transition-colors">
+                        View All Work
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Contact Details Section -->
+        <div class="px-4">
+            <div class="bg-gray-300 rounded-3xl card-shadow p-6 mb-6">
+                <div class="flex items-center mb-4">
+                    <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white mr-3">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">Contact Us</h2>
+                </div>
+
+
+                <!-- Email -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
+                    <p class="text-gray-600" id="emailAddress">info@mlaservices.com</p>
+                </div>
+
+                <!-- Address -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Address</h3>
+                    <p class="text-gray-600" id="streetAddress">GandhiNagar, Near mahamayee collage, Berhampur</p>
+                    <p class="text-gray-600" id="cityAddress">Berhampur, Odisha, 760001</p>
+                    <p class="text-gray-600" id="countryAddress">India</p>
+                </div>
+
+                <!-- Direction Button -->
+                <button onclick="getDirections()"
+                    class="w-full bg-orange-500 text-white py-3 px-6 rounded-xl font-semibold hover:bg-orange-500 transition-colors flex items-center justify-center">
+                    <i class="fas fa-location-arrow mr-2"></i>
+                    Direction
+                </button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="px-4">
+            <div class="flex justify-between items-center">
+                <button onclick="showQR()"
+                    class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                    <i class="fas fa-qrcode"></i>
+                </button>
+
+                <button onclick="shareProfile()"
+                    class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                    <i class="fas fa-share-alt"></i>
+                </button>
+
+                <button onclick="addToContact()"
+                    class="bg-orange-500 text-white py-3 px-6 rounded-xl font-semibold hover:bg-orange-500 transition-colors flex items-center">
+                    <i class="fas fa-user-plus mr-2"></i>
+                    Add to Contact
+                </button>
+
+                <button onclick="showMore()"
+                    class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-sm mx-4">
+            <div class="text-center">
+                <h3 class="text-xl font-bold mb-4">QR Code</h3>
+                <div class="w-48 h-48 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
+                    <img src="images/frame.png" class="w-full h-full object-contain" alt="">
+                    <!-- <i class="fas fa-qrcode text-6xl text-gray-400"></i> -->
+                </div>
+                <p class="text-gray-600 mb-4">Scan to contact</p>
+                <button onclick="closeQR()" class="bg-orange-500 text-white py-2 px-6 rounded-xl">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
