@@ -48,36 +48,44 @@
             <!-- Overlay content -->
             <div class="relative z-20 text-white p-8 h-full flex flex-col justify-start">
 
-                <div class="flex items-center space-x-6 mt-60 text-black">
-                    <div>
-                        <h1 class="text-3xl font-bold mb-1" id="userName">K ANIL KUMAR</h1>
-                        <p class="text-lg opacity-90 mb-1 font-semibold" id="userTitle">You</p>
-                        <p class="text-base opacity-80 font-semibold" id="userCompany">Your Company</p>
 
-                        <div class="mt-3 flex items-center">
-                            <div
-                                class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-black font-bold text-lg">
-                                S
-                            </div>
-                            <span class="ml-2 text-lg font-semibold text-black ">Teamwork.Co</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="absolute bottom-1 left-8 flex space-x-6 z-30">
+                <div class="absolute bottom-1 left-8 flex gap-5 w-full z-30">
+                    <!-- Call -->
                     <button onclick="makeCall()"
-                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
-                        <i class="fas fa-phone"></i>
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors">
+                        <i class="fas fa-phone text-xl"></i>
                     </button>
-                    <button onclick="sendEmail()"
-                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
-                        <i class="fas fa-envelope"></i>
+
+                    <!-- WhatsApp -->
+                    <button onclick="window.open('https://wa.me/+919437063848', '_blank')"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-whatsapp text-xl"></i>
                     </button>
-                    <button onclick="sendMessage()"
-                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-500 transition-colors">
-                        <i class="fas fa-comment"></i>
+
+                    <!-- Facebook -->
+                    <button onclick="window.open('https://www.facebook.com/kanilkumarbam/', '_blank')"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
                     </button>
+
+                    <!-- Instagram -->
+                    <button onclick="window.open('https://www.instagram.com/kanilkumarbjp/', '_blank')"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </button>
+
+                    <!-- Twitter -->
+                    <button onclick="window.open('https://x.com/kanilkumarbjp', '_blank')"
+                        class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </button>
+
+
+
+
                 </div>
+
             </div>
         </div>
 
@@ -86,12 +94,19 @@
             <div class="bg-gray-300 rounded-3xl card-shadow p-6 mb-6">
                 <h2 class="text-xl font-bold text-gray-800 mb-3">About Me</h2>
                 <p class="text-gray-600 leading-relaxed" id="aboutDescription">
-                    Elected representative committed to public service, grassroots development, and transparent
-                    governance.
-                    Focused on uplifting communities, empowering youth, and driving sustainable progress for all.
+                    <strong>Leadership. Experience. Values.</strong><br><br>
+
+                    K Anil Kumar is a businessman and elected Member of the Odisha Legislative Assembly from Berhampur
+                    (2024), representing BJP.<br><br>
+
+                    Berhampur is an urban constituency in Odisha’s Ganjam district.<br><br>
+
+                    Committed to public service, community upliftment, youth empowerment, and sustainable development.
                 </p>
             </div>
         </div>
+
+
 
         <!-- Our Work Section -->
         <div class="px-4">
@@ -172,11 +187,16 @@
                     <h2 class="text-xl font-bold text-gray-800">Contact Us</h2>
                 </div>
 
+                <!-- Call Us -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Call Us</h3>
+                    <p class="text-gray-600" id="phoneNumber">+91 94370 63848</p>
+                </div>
 
                 <!-- Email -->
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-                    <p class="text-gray-600" id="emailAddress">info@mlaservices.com</p>
+                    <p class="text-gray-600" id="emailAddress">kanilkumarbjp@gmail.com </p>
                 </div>
 
                 <!-- Address -->
@@ -230,14 +250,12 @@
                 <h3 class="text-xl font-bold mb-4">QR Code</h3>
                 <div class="w-48 h-48 bg-gray-200 rounded-xl mx-auto mb-4 flex items-center justify-center">
                     <img src="images/frame.png" class="w-full h-full object-contain" alt="">
-                    <!-- <i class="fas fa-qrcode text-6xl text-gray-400"></i> -->
                 </div>
                 <p class="text-gray-600 mb-4">Scan to contact</p>
                 <button onclick="closeQR()" class="bg-orange-500 text-white py-2 px-6 rounded-xl">Close</button>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 

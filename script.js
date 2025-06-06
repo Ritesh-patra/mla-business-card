@@ -57,7 +57,7 @@ function initializePage() {
 
 // Phone call function
 function makeCall() {
-  window.location.href = `tel:${contactInfo.phone}`
+  window.location.href = 'tel:+919437063848';
 }
 
 // Email function
